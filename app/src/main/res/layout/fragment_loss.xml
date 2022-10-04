@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/space"
+    tools:context=".Loss">
+
+    <TextView
+        android:id="@+id/lossSpeakableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/starwars"
+        android:rotationX="33"
+        android:text="@string/loss_speakable_text"
+        android:textColor="@color/text_color"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/typedPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/starwars"
+        android:rotationX="33"
+        android:text="@string/typed_points_text"
+        android:textColor="@color/text_color"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/lossSpeakableText"
+        app:layout_constraintStart_toStartOf="@+id/lossSpeakableText"
+        app:layout_constraintTop_toBottomOf="@+id/lossSpeakableText" />
+
+    <TextView
+        android:id="@+id/typedPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:rotationX="33"
+        android:textColor="@color/text_color"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="@+id/typedPointsText"
+        app:layout_constraintStart_toStartOf="@+id/typedPointsText"
+        app:layout_constraintTop_toBottomOf="@+id/typedPointsText"
+        tools:text="1337" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:rotationX="33"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typedPoints">
+
+        <Button
+            android:id="@+id/tryAgaintButton"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/starwars"
+            android:gravity="center"
+            android:text="@string/try_again_button_text"
+            android:textColor="@color/text_color"
+            android:textSize="96sp" />
+
+        <Button
+            android:id="@+id/goHomeButton"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/starwars"
+            android:gravity="center"
+            android:text="@string/go_home_button_text"
+            android:textColor="@color/text_color"
+            android:textSize="96sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

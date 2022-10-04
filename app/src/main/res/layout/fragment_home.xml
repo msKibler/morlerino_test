@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/millennium_falcon_cockpit"
+    tools:context=".fragments.home.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/homPresentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/starwars"
+        android:rotationX="33"
+        android:text="@string/home_present_text"
+        android:textColor="@color/text_color"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bestScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/starwars"
+        android:rotationX="37"
+        android:text="@string/best_score_text"
+        android:textColor="@color/text_color"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/homPresentText"
+        app:layout_constraintStart_toStartOf="@+id/homPresentText"
+        app:layout_constraintTop_toBottomOf="@+id/homPresentText" />
+
+    <TextView
+        android:id="@+id/bestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:rotationX="33"
+        android:text="0"
+        android:textColor="@color/text_color"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bestScoreText"
+        app:layout_constraintStart_toStartOf="@+id/bestScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/bestScoreText"
+        tools:text="128" />
+
+    <Button
+        android:id="@+id/playButton"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/starwars"
+        android:lines="2"
+        android:rotationX="33"
+        android:singleLine="false"
+        android:text="@string/play_button_text"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestScore" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@drawable/settings_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

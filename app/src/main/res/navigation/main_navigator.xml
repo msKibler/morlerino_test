@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigator"
+    app:startDestination="@id/fragmentHome">
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.morlerino_test.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_game"
+            app:destination="@id/gameActivity" />
+        <action
+            android:id="@+id/action_home_to_settings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameActivity"
+        android:name="com.example.morlerino_test.gameViewLogic.GameActivity"
+        android:label="fragment_game"
+        tools:layout="@layout/activity_game">
+        <action
+            android:id="@+id/action_game_to_home2"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_game_to_loss"
+            app:destination="@id/fragmentLoss">
+            <argument
+                android:name="points"
+                android:defaultValue="0" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.example.morlerino_test.fragments.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settings_to_home2"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLoss"
+        android:name="com.example.morlerino_test.loss"
+        android:label="fragment_loss"
+        tools:layout="@layout/fragment_loss" >
+        <action
+            android:id="@+id/action_loss_to_home2"
+            app:destination="@id/fragmentHome" />
+        <argument
+            android:name="points"
+            app:argType="integer" />
+    </fragment>
+</navigation>
